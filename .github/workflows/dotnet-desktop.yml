@@ -9,7 +9,7 @@ name: NET 6.0 CI (temporary)
 on:
   push:
     branches:
-      - lance/net6-update
+      - master
 
 jobs:
 
