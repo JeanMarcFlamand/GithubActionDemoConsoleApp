@@ -24,10 +24,10 @@ jobs:
     env:
       App_Packages_Directory: AppPackages
       Signing_Certificate: GitHubActionsDemo.pfx
-      Solution_Path: MyWpfApp.sln
-      Test_Project_Path: MyWpfApp.Tests\MyWpfApp.Tests.csproj
-      Wpf_Project_Path: MyWpfApp\MyWpfApp.csproj
-      Appxmanifest_Path: MyWpfApp\Package.appxmanifest
+      Solution_Path: GithubActionDemoConsoleApp.sln
+      # Test_Project_Path: MyWpfApp.Tests\MyWpfApp.Tests.csproj
+      Wpf_Project_Path: ConsoleDemoApp\ConsoleDemoApp.csproj
+      Appxmanifest_Path: ConsoleDemoApp\Package.appxmanifest
       #Wap_Project_Directory: MyWpfApp.Package
       #Wap_Project_Name: MyWpfApp.Package.wapproj
       Actions_Allow_Unsecure_Commands: true # Allows AddPath and SetEnv commands
@@ -67,8 +67,8 @@ jobs:
         RuntimeIdentifier: win-x64
 
     # Test
-    - name: Execute Unit Tests
-      run: dotnet test ${{ env.Test_Project_Path }}
+    # - name: Execute Unit Tests
+    #  run: dotnet test ${{ env.Test_Project_Path }}
 
     # Restore the application
     - name:  Restore the Wpf application to populate the obj folder
