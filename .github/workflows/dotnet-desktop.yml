@@ -100,8 +100,8 @@ jobs:
         TargetPlatform: x64
         RuntimeIdentifier: win-x64
         AppxBundlePlatforms: x86|x64   # |arm|arm64
-        SigningEnabled: true
-        GenerateAppPackage: true
+        SigningEnabled: false
+        GenerateAppPackage: false
 
     # Remove the .pfx
     - name: Remove the .pfx
