@@ -23,7 +23,7 @@ jobs:
 
     env:
       App_Packages_Directory: AppPackages
-      Signing_Certificate: GitHubActionsDemo.pfx
+      Signing_Certificate: Jean-Marc Flamand.pfx
       Solution_Path: GithubActionDemoConsoleApp.sln
       # Test_Project_Path: MyWpfApp.Tests\MyWpfApp.Tests.csproj
       Wpf_Project_Path: ConsoleDemoApp\ConsoleDemoApp.csproj
@@ -96,7 +96,7 @@ jobs:
         AppxBundle: Never
         BuildMode: SideloadOnly
         AppxPackageDir: ${{ env.GITHUB_ACTION_PATH }}\${{ env.App_Packages_Directory }}
-        Configuration: Debug
+        Configuration: Release
         TargetPlatform: x64
         RuntimeIdentifier: win-x64
         AppxBundlePlatforms: x86|x64   # |arm|arm64
