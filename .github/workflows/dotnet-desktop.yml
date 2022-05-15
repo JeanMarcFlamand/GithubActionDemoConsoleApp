@@ -23,7 +23,7 @@ jobs:
 
     env:
       App_Packages_Directory: AppPackages
-      Signing_Certificate: "Jean-Marc Flamand.pfx"
+      Signing_Certificate: GitHubActionsDemo.pfx
       Solution_Path: GithubActionDemoConsoleApp.sln
       # Test_Project_Path: MyWpfApp.Tests\MyWpfApp.Tests.csproj
       Wpf_Project_Path: ConsoleDemoApp\ConsoleDemoApp.csproj
