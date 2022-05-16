@@ -30,14 +30,14 @@ jobs:
     # development, production for sideload applications and production for the Microsoft store.
     # For more information, see https://help.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow#configuring-a-build-matrix
       matrix:
-        channel: [Dev, Prod_Sideload, Prod_Store]
+        channel: [Prod_Sideload] # [Dev, Prod_Sideload, Prod_Store]
         # targetPlatform: [x64]  #[x86, x64]
         include:
 
           # includes the following variables for the matrix leg matching Dev
           #- channel: Dev
           #  ChannelName: Dev
-          #  Configuration: Release  # Debug
+          #  Configuration: Debug
           #  DistributionUrl: https://microsoft.github.io/github-actions-for-desktop-apps-distribution-dev
           #  MsixPackageId: MyWPFApp.DevOpsDemo.Dev
           #  MsixPublisherId: CN=GitHubActionsDemo
