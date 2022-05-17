@@ -25,7 +25,11 @@ jobs:
       App_Packages_Directory: AppPackages
       Signing_Certificate: GitHubActionsDemo.pfx
       Solution_Path: GithubActionDemoConsoleApp.sln
+<<<<<<< HEAD
       # Test_Project_Path: MyWpfApp.Tests\MyWpfApp.Tests.csproj
+=======
+      # Test_Project_Path: GithubActionDemoConsoleApp.Tests\GithubActionDemoConsoleApp.Tests.csproj
+>>>>>>> yml file changes
       Wpf_Project_Path: ConsoleDemoApp\ConsoleDemoApp.csproj
       Appxmanifest_Path: ConsoleDemo.Installer\Package.appxmanifest
       #Wap_Project_Directory: ConsoleDemo.Installer
@@ -67,7 +71,11 @@ jobs:
         RuntimeIdentifier: win-x64
 
     # Test
+<<<<<<< HEAD
     # - name: Execute Unit Tests
+=======
+    #- name: Execute Unit Tests
+>>>>>>> yml file changes
     #  run: dotnet test ${{ env.Test_Project_Path }}
 
     # Restore the application
