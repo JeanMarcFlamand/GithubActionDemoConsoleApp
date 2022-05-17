@@ -25,11 +25,7 @@ jobs:
       App_Packages_Directory: AppPackages
       Signing_Certificate: GitHubActionsDemo.pfx
       Solution_Path: GithubActionDemoConsoleApp.sln
-<<<<<<< HEAD
-      # Test_Project_Path: MyWpfApp.Tests\MyWpfApp.Tests.csproj
-=======
       # Test_Project_Path: GithubActionDemoConsoleApp.Tests\GithubActionDemoConsoleApp.Tests.csproj
->>>>>>> yml file changes
       Wpf_Project_Path: ConsoleDemoApp\ConsoleDemoApp.csproj
       Appxmanifest_Path: ConsoleDemo.Installer\Package.appxmanifest
       #Wap_Project_Directory: ConsoleDemo.Installer
@@ -52,7 +48,7 @@ jobs:
     - name: Install .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: "6.0.x"
+        dotnet-version: "6.0" # was "6.0.x"
 
     # Add  MsBuild to the PATH: https://github.com/microsoft/setup-msbuild
     - name: Setup MSBuild.exe
@@ -71,11 +67,8 @@ jobs:
         RuntimeIdentifier: win-x64
 
     # Test
-<<<<<<< HEAD
     # - name: Execute Unit Tests
-=======
     #- name: Execute Unit Tests
->>>>>>> yml file changes
     #  run: dotnet test ${{ env.Test_Project_Path }}
 
     # Restore the application
