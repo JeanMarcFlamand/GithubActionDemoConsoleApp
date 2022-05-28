@@ -3,7 +3,7 @@
 
 # This continuous integration pipeline is triggered anytime a user pushes code to the repo.
 # This pipeline builds the Wpf project, runs unit tests, then saves the MSIX build artifact.
-name: NET 6.0 CI (temporary)
+name: CI NET 6.0
 
 # Trigger on every master branch push and pull request
 on:
@@ -102,7 +102,7 @@ jobs:
         RuntimeIdentifier: win-x64
         AppxBundlePlatforms: x86|x64   # |arm|arm64
         SigningEnabled: false
-        GenerateAppPackage: false
+        GenerateAppPackage: true
 
     # Remove the .pfx
     - name: Remove the .pfx
@@ -140,9 +140,9 @@ jobs:
     # - name: compress artifacts
     #   run: Compress-Archive -Path ${{ env.GITHUB_ACTION_PATH }}\${{ env.App_Packages_Directory }}\* -DestinationPath ${{ env.GITHUB_ACTION_PATH }}\${{ env.App_Packages_Directory }}\BuildArtifacts.zip
 
-    # # Upload the MSIX package: https://github.com/marketplace/actions/upload-artifact
-    # - name: Upload build artifacts
-    #   uses: actions/upload-artifact@v2
-    #   with:
-    #     name: BuildArtifacts
-    #     path: ${{ env.GITHUB_ACTION_PATH }}\${{ env.App_Packages_Directory }}\BuildArtifacts.zip
+    # Upload the MSIX package: https://github.com/marketplace/actions/upload-artifact
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: BuildArtifacts
+        path: ${{ env.GITHUB_ACTION_PATH }}\${{ env.App_Packages_Directory }}\BuildArtifacts.zip
