@@ -98,7 +98,7 @@ jobs:
         BuildMode: SideloadOnly
         AppxPackageDir: ${{ env.GITHUB_ACTION_PATH }}\${{ env.App_Packages_Directory }}
         Configuration: Release
-        TargetPlatform: x86|x64
+        TargetPlatform: x64
         RuntimeIdentifier: win-x64
         AppxBundlePlatforms: x86|x64   # |arm|arm64
         SigningEnabled: true
