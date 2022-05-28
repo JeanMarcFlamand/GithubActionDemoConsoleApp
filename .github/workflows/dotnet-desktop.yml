@@ -98,10 +98,10 @@ jobs:
         BuildMode: SideloadOnly
         AppxPackageDir: ${{ env.GITHUB_ACTION_PATH }}\${{ env.App_Packages_Directory }}
         Configuration: Release
-        TargetPlatform: x64
+        TargetPlatform: x86|x64
         RuntimeIdentifier: win-x64
         AppxBundlePlatforms: x86|x64   # |arm|arm64
-        SigningEnabled: false
+        SigningEnabled: true
         GenerateAppPackage: true
 
     # Remove the .pfx
@@ -144,5 +144,5 @@ jobs:
     - name: Upload build artifacts
       uses: actions/upload-artifact@v3
       with:
-        name: BuildArtifacts
+        name: MSIX package
         path: ${{ env.GITHUB_ACTION_PATH }}\${{ env.App_Packages_Directory }}
