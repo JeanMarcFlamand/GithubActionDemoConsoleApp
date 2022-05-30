@@ -9,7 +9,7 @@
   <Identity
     Name="88768de7-afd0-447f-8916-903ca22054bc"
     Publisher="CN=Jean-Marc Flamand, O=Jean-Marc Flamand, S=Quebec, C=CA"
-    Version="1.0.0.0" />
+    Version="1.0.1.0" />
 
   <Properties>
     <DisplayName>Console Demo App</DisplayName>
