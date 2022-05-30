@@ -49,7 +49,7 @@ jobs:
             ChannelName: Prod_Sideload
             DistributionUrl: https://https://github.com/JeanMarcFlamand/GithubActionDemoConsoleApp/releases/download/Desktop-
             MsixPackageId: GithubActionDemoConsoleApp.DevOpsDemo.ProdSideload
-            MsixPublisherId: CN=GitHubActionsDemo
+            MsixPublisherId: CN=Jean-Marc Flamand
             MsixPackageDisplayName: MGithubActionDemoConsoleApp (ProdSideload)
 
           # includes the following variables for the matrix leg matching Prod_Store
@@ -66,7 +66,7 @@ jobs:
     env:
       App_Packages_Archive: AppPackages.zip
       App_Packages_Directory: AppPackages
-      SigningCertificate: Jean-Marc Flamand.pfx
+      SigningCertificate: JeanMarcFlamand.pfx
       Solution_Path: GithubActionDemoConsoleApp.sln
       # Test_Project_Path: MyWpfApp.Tests\MyWpfApp.Tests.csproj
       Wpf_Project_Path: ConsoleDemoApp\ConsoleDemoApp.csproj
